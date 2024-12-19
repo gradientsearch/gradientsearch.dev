@@ -1,0 +1,133 @@
+[
+	{
+		"name": "Equinix Metal",
+		"title": "Senior Security Engineer",
+		"start": "2023",
+		"end": "2024",
+		"iconPath": "work/eqix.svg",
+		"href": "https://deploy.equinix.com/",
+		"summary": "Secured infrastructure for 220 applications across 80 global Kubernetes clusters (800+ nodes) and 5,000+ deployments. Focused on scaling security, driving operational efficiency, and enabling teams to maintain secure practices in a fast-paced, cloud-native environment.",
+		"overview": {
+			"summary": "As a security-focused engineer at Equinix Metal, I was responsible for securing the infrastructure supporting 220 applications across a global fleet of 80 Kubernetes clusters (800+ nodes), with over 5000 deployments.",
+			"contributions": {
+				"✅ Infrastructure Security": [
+					"▼ Secured and maintained infrastructure for critical applications, leveraging tools like Sysdig, Trivy, Falco, and HashiCorp Vault to ensure high security and reliability at scale."
+				],
+				"✅ Kubernetes Security": [
+					"▼ Identified and remediated several security vulnerabilities, including elevating Pod Security Standards to prevent privilege escalation risks.",
+					"▼ Secured sensitive Kubernetes secrets, such as the CA private key for root access, using HashiCorp Vault."
+				],
+				"✅ Tool Integration": [
+					"▼ Deployed security tools via Helm and ArgoCD, integrating them with Splunk, Slack, Prometheus, and Grafana for centralized monitoring and alerting."
+				],
+				"✅ Bare Metal Kubernetes Configuration": [
+					"▼ Configured Kubernetes on bare metal using Flatcar Container Linux, Ansible playbooks, and kubeadm.",
+					"▼ Developed custom Go programs to monitor SSH logins for SOC2 compliance and to extract and visualize Trivy vulnerability metrics across clusters in Grafana dashboards."
+				]
+			},
+			"skills": "Kubernetes · Helm (Software) · Ansible · HashiCorp Vault · Go · Python · Pandas (Software) · NumPy · SELinux · Sysdig · Falco Security · Trivy · Docker · ArgoCD"
+		}
+	},
+	{
+		"name": "Equinix",
+		"title": "Senior Security Engineer",
+		"start": "2020",
+		"end": "2023",
+		"iconPath": "work/eqix.svg",
+		"href": "https://www.equinix.com/",
+		"summary": "In the Infosec organization, I focused on data science initiatives and leveraged automation to strengthen security measures. I contributed to enhancing Equinix's security posture while improving operational efficiency across global infrastructure through data-driven insights and best practices.",
+		"overview": {
+			"summary": "In the Infosec organization, I focused on data science initiatives and leveraged automation to strengthen security measures. I contributed to enhancing Equinix's security posture while improving operational efficiency across global infrastructure through data-driven insights and best practices.",
+			"contributions": {
+				"✅ Infosec Data Science Initiatives": [
+					"▼ Coordinated the build of a dedicated Infosec Kubernetes cluster in Equinix Metal with 6 m3.large.x86 servers.",
+					"▼ Designed a data lake strategy and created a generic data ingest K8s deployment to collect security feeds and logs using rsyslog and Fluentbit.",
+					"▼ Utilized Argo Workflows DAGs to manage the ML pipeline steps for processing security data."
+				],
+				"✅ Security Automation & Best Practices": [
+					"▼ Automated the collection of global PAN firewall logs during a ransomware attack in 2020 to support the Red Team.",
+					"▼ Advised IT teams on security best practices, such as key rotation and access control to minimize security risks."
+				]
+			},
+			"skills": "Kubernetes · Helm Charts · ArgoCD · Python · Go · MLOps"
+		}
+	},
+	{
+		"name": "Georgia Pacific",
+		"title": "Machine Learning Engineer (Freelancer)",
+		"start": "2021",
+		"end": "2021",
+		"iconPath": "work/gp.svg",
+		"href": "https://www.gp.com/",
+		"summary": "As a freelancer, designed a thread-safe, modular C++ application to connect to facility cameras over RTSP, detect motion in restricted areas, and alert on safety violations. Leveraged ML and computer vision to enhance security and automate safety monitoring. Deployed the solution to Kubernetes clusters at manufacturing plants for scalable, real-time monitoring.",
+		"overview": {
+			"summary": "As a freelancer, designed a thread-safe, modular C++ application to connect to facility cameras over RTSP, detect motion in restricted areas, and alert on safety violations. Leveraged ML and computer vision to enhance security and automate safety monitoring. Deployed the solution to Kubernetes clusters at manufacturing plants for scalable, real-time monitoring.",
+			"contributions": {
+				"✅ Thread-Safe, Modular C++ Program": [
+					"▼ Designed a thread-safe, modular C++ application to interface with facility cameras over RTSP, continuously reading frames and pushing them to a mutex-protected queue.",
+					"▼ Implemented worker threads to process frames, detect motion in restricted areas, and call a gRPC Yolo5 endpoint for object detection."
+				],
+				"✅ Safety Violation Alerts": [
+					"▼ Developed a system to detect and alert on safety violations based on detected objects in motion, ensuring real-time monitoring and rapid response."
+				],
+				"✅ Containerization & Deployment": [
+					"▼ Containerized the C++ program and the pretrained Yolo5 model, deploying them to Kubernetes clusters using Helm for scalable, reliable execution."
+				]
+			},
+			"skills": "C++ · Helm (Software) · Kubernetes · Yolo5"
+		}
+	},
+	{
+		"name": "Global Payments Inc",
+		"title": "Security Engineer",
+		"start": "2019",
+		"end": "2020",
+		"iconPath": "work/global.svg",
+		"href": "https://www.globalpayments.com/",
+		"summary": "Automated the manual review of enterprise application logs for PCI compliance by developing an extensible ML pipeline in Kubeflow and a web application for scheduling log reviews and validating model predictions. This solution significantly reduced manual effort and improved efficiency by enabling automated anomaly detection for PCI compliance.",
+		"overview": {
+			"summary": "Automated the manual review of enterprise application logs for PCI compliance by developing an extensible ML pipeline in Kubeflow and a web application for scheduling log reviews and validating model predictions. This solution significantly reduced manual effort and improved efficiency by enabling automated anomaly detection for PCI compliance.",
+			"contributions": {
+				"✅ Automated Log Review Process": [
+					"▼ Developed a generic ML pipeline to automate the review of application logs for PCI compliance, replacing the manual process for log owners."
+				],
+				"✅ End-to-End ML Pipeline": [
+					"▼ Built extract, clean, transform, train, and predict scripts using Scikit-Learn, Pandas, and Numpy."
+				],
+				"✅ Anomaly Detection": [
+					"▼ Trained an unsupervised K-Means algorithm on log data to predict anomalous log entries, flagging any new samples that were 2 standard deviations away from their cluster centroid."
+				],
+				"✅ Web Application Integration": [
+					"▼ Developed a web interface enabling app owners to schedule log reviews and easily validate the model's predictions."
+				]
+			},
+			"skills": "Kubernetes · Kubeflow · Scikit-Learn · NumPy · Pandas (Software) · Web Development · Angular Material · OIDC · MongoDB"
+		}
+	},
+	{
+		"name": "Georgia Tech Research Institute",
+		"title": "Security Researcher",
+		"start": "2016",
+		"end": "2019",
+		"iconPath": "work/gtri.png",
+		"href": "https://www.gtri.gatech.edu/",
+		"summary": "Split time between software development and machine learning research, working on projects to enhance security and automate processes for government sponsors. Led a joint project with McAfee to classify the severity of SIEM alerts using machine learning, automating alert reporting and prioritizing alerts for SOC analysts. Focused on advancing software security and applying ML to improve security operations and threat detection.",
+		"overview": {
+			"summary": "Split time between software development and machine learning research, working on projects to enhance security and automate processes for government sponsors. Led a joint project with McAfee to classify the severity of SIEM alerts using machine learning, automating alert reporting and prioritizing alerts for SOC analysts. Focused on advancing software security and applying ML to improve security operations and threat detection.",
+			"contributions": {
+				"✅ Security & Software Development": [
+					"▼ Improved a government-sponsored email and file management web app by implementing the Bell-LaPadula security model.",
+					"▼ Applied industry-standard security practices to secure data at rest, in transit, and in use.",
+					"▼ Refactored the existing monolithic application into modular components using Angular, Bootstrap, Tomcat, Jersey, and Jackson."
+				],
+				"✅ Adversarial Machine Learning Research": [
+					"▼ Conducted research on adversarial machine learning attack prevention and detection techniques against various machine learning algorithms (SVM, Neural Networks, Decision Trees, Random Forests, KNN, etc.)."
+				],
+				"✅ Lead Machine Learning Engineer – SIEM Project": [
+					"▼ Led a joint project with McAfee to classify the severity of SIEM alerts using machine learning, automating alert reporting and prioritizing alerts for SOC analysts."
+				]
+			},
+			"skills": "Java · JavaScript · Angular Material · HTML · Bootstrap (Framework) · JUnit · Unit Testing · Python · Scikit-Learn · NumPy · Pandas (Software) · Machine Learning"
+		}
+	}
+]

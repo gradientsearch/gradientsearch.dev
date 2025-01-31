@@ -19,7 +19,7 @@
 
 	let jobs: Job[] = workData;
 
-	let ps = posts.reverse().slice(0, 3);
+	let ps = [...posts].reverse().slice(0, 3);
 </script>
 
 <svelte:head>

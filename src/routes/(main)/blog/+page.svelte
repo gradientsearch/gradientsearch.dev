@@ -18,7 +18,7 @@
 		class="transition-colors md:border-l-2 md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40"
 	>
 		<div class="flex max-w-3xl flex-col space-y-16">
-			{#each posts.reverse() as p}
+			{#each [...posts].reverse() as p}
 				<Post variant={'main'} id={p.id} title={p.title} description={p.description} date={p.date}
 				></Post>
 			{/each}

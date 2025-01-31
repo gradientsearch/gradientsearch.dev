@@ -22,5 +22,17 @@ export const posts: post[] = [
 		title: 'Developing an Open-Source Password Manager with HashiCorp Vault Plugin',
 		description: `In this demo, I showcase an open-source password manager I’m currently developing, which integrates with HashiCorp Vault via a Vault plugin. I walk through the process of registering a user, unlocking the password manager, and creating and viewing passwords. Additionally, I explain how password entries are stored in Vault using the KV-v2 secret engine, including the encryption and decryption processes, and how Vault policies control access to these entries.`,
 		date: '2025-01-17'
+	},
+	{
+		id: '4',
+		title: 'Setting Up PwManager Development Environment and Registering a User',
+		description: `In this tutorial, we’ll walk through setting up the development environment for PwManager and registering a user. We’ll cover the steps to configure the environment, start the client-side app, log into Vault, and create a user account. You’ll also learn how to store the secret key, unlock the password manager, and add your first password entry.`,
+		date: '2025-01-24'
+	},
+	{
+		id: '5',
+		title: 'Managing Password Entries: Edit, Add, and Delete Features',
+		description: `In this demo, we go over how to update, add, and delete entries in a password manager. You’ll see how to modify existing passwords, add extra details like text or date, and remove items or entries as needed. We also demonstrate how to work with different types of data such as text, passwords, and dates. This session builds on the first demo, showing the new functionality added to manage password entries more effectively.`,
+		date: '2025-01-31'
 	}
 ];

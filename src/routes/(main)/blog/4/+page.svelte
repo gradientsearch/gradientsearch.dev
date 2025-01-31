@@ -4,7 +4,7 @@
 	import PageLayout from '../../../../components/layout/pageLayout.svelte';
 	import PageParagraph from '../../../../components/pageParagraph.svelte';
 
-	let p: post = posts[2];
+	let p: post = posts[3];
 	let title = p.title;
 	let date = p.date;
 	let backText = 'blog';
@@ -14,18 +14,17 @@
 <!-- POST 2 -->
 
 <PageLayout {backHref} {backText} {title} {date}>
-	<PageSubtitle className="underline underline-offset-8 decoration-sky-500">Demo</PageSubtitle>
+	<PageSubtitle className="underline underline-offset-8 decoration-sky-500">Tutorial</PageSubtitle>
 	<PageParagraph>
-		In this demo, I showcase an open-source password manager I’m currently developing, which
-		integrates with HashiCorp Vault via a Vault plugin. I walk through the process of registering a
-		user, unlocking the password manager, and creating and viewing passwords. Additionally, I
-		explain how password entries are stored in Vault using the KV-v2 secret engine, including the
-		encryption and decryption processes, and how Vault policies control access to these entries.
+		In this tutorial, we’ll walk through setting up the development environment for PwManager and
+		registering a user. We’ll cover the steps to configure the environment, start the client-side
+		app, log into Vault, and create a user account. You’ll also learn how to store the secret key,
+		unlock the password manager, and add your first password entry.
 	</PageParagraph>
 	<div class="pt-10">
 		<iframe
 			class="md:min-h-[315px] min-h-[250px] w-full"
-			src="https://www.youtube.com/embed/T7pL32kxAhQ?si=Ef4lowBpqeODZPUE"
+			src="https://www.youtube.com/embed/bdtOFmLfTd8?si=u8FsL1UWs2AxWZvq"
 			title="YouTube video player"
 			frameborder="0"
 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

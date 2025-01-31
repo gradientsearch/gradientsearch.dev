@@ -16,5 +16,11 @@ export const posts: post[] = [
 		title: 'How to Host a Svelte Static Site on GitHub Pages',
 		description: `In today’s web development world, building fast and lightweight static sites is easier than ever. One such powerful framework for creating modern, high-performance static sites is Svelte. Known for its simplicity and speed, Svelte compiles down to optimized JavaScript, offering an excellent user experience with minimal overhead.`,
 		date: '2024-12-17'
+	},
+	{
+		id: '3',
+		title: 'Developing an Open-Source Password Manager with HashiCorp Vault Plugin',
+		description: `In this demo, I showcase an open-source password manager I’m currently developing, which integrates with HashiCorp Vault via a Vault plugin. I walk through the process of registering a user, unlocking the password manager, and creating and viewing passwords. Additionally, I explain how password entries are stored in Vault using the KV-v2 secret engine, including the encryption and decryption processes, and how Vault policies control access to these entries.`,
+		date: '2025-01-17'
 	}
 ];

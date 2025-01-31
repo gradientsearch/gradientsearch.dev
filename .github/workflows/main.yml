@@ -2,9 +2,9 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - 'main'
-      - 'confgiure-static-build'
+    tags:
+      - 'v*'
+      
 
 jobs:
   build_site:

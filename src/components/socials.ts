@@ -13,5 +13,10 @@ export const socials = [
 		href: 'https://linkedin.com/in/stephenodwyer/',
 		label: 'Follow on LinkedIn',
 		name: 'LinkedIn'
+	},
+	{
+		href: 'https://www.youtube.com/@gradientsearch',
+		label: 'Watch on YouTube',
+		name: 'YouTube'
 	}
 ];

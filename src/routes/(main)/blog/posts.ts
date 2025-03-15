@@ -40,5 +40,11 @@ export const posts: post[] = [
 		title: 'Sharing Password Bundles',
 		description: `In this demo, I will showcase new features, including creating a new bundle and sharing bundles with other users.`,
 		date: '2025-03-13'
+	},
+	{
+		id: '7',
+		title: 'Synchronizing PwManager: Preventing Race Conditions When Sharing Password Bundles',
+		description: `This blog post explores how PwManager handles synchronization when sharing password bundles to prevent race conditions. It explains the concept of password bundles and the potential issues when multiple admins try to modify the same bundle simultaneously. The post details how mutexes are used to synchronize updates across goroutines and prevent conflicts. Additionally, it discusses the benefits of a dynamic map of mutexes and how it efficiently manages lock acquisition and garbage collection. Finally, the post touches on a practical example sourced from Stack Overflow, provided by Brad Peabody.`,
+		date: '2025-03-15'
 	}
 ];

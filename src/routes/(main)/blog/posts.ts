@@ -34,5 +34,11 @@ export const posts: post[] = [
 		title: 'Managing Password Entries: Edit, Add, and Delete Features',
 		description: `In this demo, we go over how to update, add, and delete entries in a password manager. You’ll see how to modify existing passwords, add extra details like text or date, and remove items or entries as needed. We also demonstrate how to work with different types of data such as text, passwords, and dates. This session builds on the first demo, showing the new functionality added to manage password entries more effectively.`,
 		date: '2025-01-31'
+	},
+	{
+		id: '6',
+		title: 'Sharing Password Bundles',
+		description: `In this demo, I will showcase new features, including creating a new bundle and sharing bundles with other users.`,
+		date: '2025-03-13'
 	}
 ];

@@ -23,13 +23,14 @@
 </script>
 
 <svelte:head>
-	<title>Stephen O'Dwyer - Data Driven Security Engineer | Software, Cyber, ML, SRE | {base}</title>
+	<title>Stephen O'Dwyer - Data Driven Security Software Engineer | Software, Cyber, ML, SRE | {base}</title>
 	<meta name="description" content="Stephen O'Dwyer Introduction" />
 </svelte:head>
 
 <Container className={'pt-6 sm:pt-12 lg:pt-20'}>
 	<PageTitle>Data Driven</PageTitle>
-	<PageTitle>Security Engineer</PageTitle>
+	<PageTitle>Security Software</PageTitle>
+	<PageTitle>Engineer</PageTitle>
 
 	<h2 class="py-3 underline underline-offset-8">Software, Cyber, ML, SRE</h2>
 

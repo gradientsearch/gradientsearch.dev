@@ -90,11 +90,11 @@
 	<Code code={json} lang="json"></Code>
 
 	<PageParagraph>
-		Renovate Bot will be working behind the scenes to review the project dependencies. After waiting
-		a few more minutes, you will see PRs opened in your repository to upgrade dependencies. Before
-		blindly merging the updates, ensure the updates makes sense. Projects with robust testing and a
-		CI/CD pipeline that run tests before merging to the main are more comfortable upgrading
-		dependencies in this automated way.
+		Renovate Bot will work behind the scenes to review your project's dependencies. After a few more
+		minutes, you’ll see PRs opened in your repository to upgrade the dependencies. Before merging
+		the updates, make sure they make sense for your project. Projects with robust testing and a
+		CI/CD pipeline to run tests prior to merging are generally more comfortable
+		automating dependencies in this automated way.
 	</PageParagraph>
 	<img src="{base}/blog/8/4_prs.png" alt="renovate app" />
 

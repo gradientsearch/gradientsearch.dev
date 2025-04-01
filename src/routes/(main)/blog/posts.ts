@@ -46,5 +46,12 @@ export const posts: post[] = [
 		title: 'Synchronizing PwManager: Preventing Race Conditions When Sharing Password Bundles',
 		description: `This blog post explores how PwManager handles synchronization when sharing password bundles to prevent race conditions. It explains the concept of password bundles and the potential issues when multiple admins try to modify the same bundle simultaneously. The post details how mutexes are used to synchronize updates across goroutines and prevent conflicts. Additionally, it discusses the benefits of a dynamic map of mutexes and how it efficiently manages lock acquisition and garbage collection. Finally, the post touches on a practical example sourced from Stack Overflow, provided by Brad Peabody.`,
 		date: '2025-03-15'
+	},
+	{
+		id: '8',
+		title: 'Effortless Dependency Management: A Step-by-Step Guide to Renovate Bot',
+		description: `This blog post demonstrates how to automate dependency management using Renovate Bot, an open-source tool that helps keep your project's dependencies up to date by automatically creating pull requests for version updates. I’ll walk you through the process of setting up Renovate Bot for this website, saving time and ensuring your dependencies are always current and secure.`,
+		date: '2025-04-01'
 	}
+
 ];

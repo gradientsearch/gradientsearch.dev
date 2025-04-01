@@ -6,6 +6,7 @@
 	import xml from 'highlight.js/lib/languages/xml';
 	import plaintext from 'highlight.js/lib/languages/plaintext';
 	import yaml from 'highlight.js/lib/languages/yaml';
+	import json from 'highlight.js/lib/languages/json';
 	let { lang, code } = $props();
 
 	switch (lang) {
@@ -21,6 +22,8 @@
 			hljs.registerLanguage('plaintext', plaintext);
 		case 'yaml':
 			hljs.registerLanguage('yaml', yaml);
+		case 'json':
+			hljs.registerLanguage('json', json);
 	}
 
 	let hc = hljs.highlight(code, { language: lang }).value;

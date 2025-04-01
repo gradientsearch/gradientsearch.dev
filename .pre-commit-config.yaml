@@ -1,0 +1,11 @@
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.24.2
+    hooks:
+      - id: gitleaks
+  - repo: https://github.com/gradientsearch/pre-commit-trivy
+    rev: v0.13.0
+    hooks:
+      - id: trivyfs-docker
+        args:
+        - .

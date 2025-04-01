@@ -19,3 +19,5 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+.pre-commit-trivy-cache
+.pre-commit-trivy-cache

@@ -12,11 +12,21 @@
 			"contributions": {
 				"✅ Software Development": [
 					{
-						"▼ Open Source Compliance SSH monitoring Software": [
+						"▼ Open Source SSH monitoring Software": [
 							"▼ Used two goroutines to monitor OpenSSH logins and Auditd logs, sending specific actions to a correlation Go channel. A third goroutine then processed the actions, correlating authenticated user activity synchronously and forwarding the results to Splunk.",
 							"▼ Re-architected the software to support any Linux distro by abstracting how it monitors systemd and audit logs, creating a mental model for ingesters and processors, while eliminating approximately 1,000 lines of complex code.",
 							"▼ Further abstracted and simplified ingesters through the use of named pipes, providing a simple interface for ingesters to consume new events. Used the <strong>bufio.ReadString</strong> method, which blocks until a delimiter is matched or an error is returned, often <strong>io.EOF</strong> when the named pipe closes.",
-							"Find the source code here: <a class='text-sky-500' href='https://github.com/metal-toolbox/audito-maldito/tree/main'>Audito</a>"
+							"▼ Deployed the software across 80 Kubernetes clusters using ArgoCD and Helm. ArgoCD was used to manage the continuous delivery and synchronization of the application across the clusters, while Helm facilitated the deployment and management of the application’s configurations in a consistent and repeatable manner.",
+							"Find the source code here: (Software: <a class='text-sky-500' href='https://github.com/metal-toolbox/audito-maldito/tree/main'>Audito</a>) (Helm: <a class='text-sky-500' href='https://github.com/equinixmetal-helm/audito-maldito'>Chart</a>)"
+						]
+					},
+					{
+						"▼ HashiCorp Vault Kubernetes Auth Method Configuration": [
+							"▼ In a fast-paced, constantly changing environment, I developed a custom Go CLI tool to manage secret configurations for Kubernetes applications. This tool integrated with several in-house systems to ensure proper secret management configuration for 200 Kubernetes applications, automatically updating Vault configurations whenever the environment changed, such as when a new application was deployed to a cluster.",
+							"▼ This app retrieves the current state of the infrastructure through an exposed API, fetches user and group data from an internal IAM API, and accesses the current Vault configuration. It then identifies the necessary changes and applies them to Vault via a REST API.",
+							"▼ The code included a custom Vault <strong>http.Client</strong> with methods to access Vault's Auth, Identity, Mounts, and Policy endpoints, as well as services with a clean interface for interacting with internal APIs.",
+							"▼ Unit tests for the business logic were written using Go's <strong>testing</strong> package.",
+							"▼ Integration tests were run locally by spinning up a Vault Docker image, configuring Vault with the base configuration, running the CLI tool, and finally using the Vault client to validate that the correct configurations were applied."
 						]
 					}
 				],

@@ -33,23 +33,38 @@
 					{
 						"▼ Falco Rule Event Generator Test Sandbox (Go)": [
 							"▼ Falco is a cloud-native security tool that detects abnormal behavior, security threats, and compliance violations in real time across hosts, containers, Kubernetes, and cloud environments by leveraging custom rules on Linux kernel events and other data sources.",
-							"▼ I created a custom sandbox to validate that the Falco rules were written correctly before updating them in production. The sandbox consisted of a Minikube VM with Falco installed, configured with custom rules, and an event generator Go app that triggered events.",
+							"▼ Created a custom sandbox to validate that the Falco rules were written correctly before updating them in production. The sandbox consisted of a Minikube VM with Falco installed, configured with custom rules, and an event generator Go app that triggered events.",
 							"▼ The event generator app followed the design outlined in the <a href='https://github.com/falcosecurity/event-generator' class='text-sky-500'> falcosecurity/event-generator</a> repository. Each custom event test was written in a separate file and registered at startup. A test loop then ran each event, validating whether it was properly generated or ignored by connecting to the Falco gRPC socket."
 						]
 					}
 				],
-				"✅ Infrastructure Security": [
-					"▼ Secured and maintained infrastructure for critical applications, leveraging tools like Sysdig, Trivy, Falco, and HashiCorp Vault to ensure high security and reliability at scale."
-				],
-				"✅ Kubernetes Security": [
-					"▼ Identified and remediated several security vulnerabilities, including elevating Pod Security Standards to prevent privilege escalation risks.",
-					"▼ Secured sensitive Kubernetes secrets, such as the CA private key for root access, using HashiCorp Vault."
-				],
-				"✅ Tool Integration": [
-					"▼ Deployed security tools via Helm and ArgoCD, integrating them with Splunk, Slack, Prometheus, and Grafana for centralized monitoring and alerting."
-				],
-				"✅ Bare Metal Kubernetes Configuration": [
-					"▼ Configured Kubernetes on bare metal using Flatcar Container Linux, Ansible playbooks, and kubeadm."
+				"✅ Security": [
+					{
+						"▼ Runtime Security": [
+							"▼ Managed Sysdig and deployed it using the Sysdig Operator via Helm. Additionally, I leveraged ArgoCD to automate continuous delivery and ensure seamless synchronization of the application across multiple clusters.",
+							"▼ Monitored runtime events, investigating any that appeared abnormal, such as a user accessing an etc container as root, to identify potential security threats or policy violations.",
+							"▼ Fine-tuned the runtime rules within the Sysdig SaaS platform, carefully balancing custom rulesets with the pre-configured managed rulesets to optimize security and minimize false positives."
+						]
+					},
+					{
+						"▼ Secrets Management": [
+							"▼ Deployed Enterprise HashiCorp Vault to Kubernetes, with one primary and one failover cluster. Each Vault deployment was configured with high availability (HA), consisting of 5 Vault servers: one active write server and 4 standby read servers, replicating data using the Raft consensus algorithm.",
+							"▼ Leveraged ArgoCD to automate continuous delivery and ensure seamless synchronization across environments.",
+							"▼ Configured Okta integration in Vault for user access management.",
+							"▼ Set up the Kubernetes Auth Method to enable secure authentication for Kubernetes clusters.",
+							"▼ Configured policies for users, groups, and applications to enforce access controls.",
+							"▼ Demoed the Kubernetes Auth Method to engineering teams, provided example app configurations, promoting its adoption and ensuring a smoother integration process."
+						]
+					},
+					{
+						"▼ Threat Modeling": [
+							"▼ Continuously performed threat model analysis as my understanding of the infrastructure and environment grew, which revealed additional potential threat vectors.",
+							"▼ Collaborated with the SRE team to schedule periodic CIS benchmark tests for Kubernetes environments using kube-bench.",
+							"▼ Identified gaps in Pod Security Standards, presented the associated risks to leadership, and proposed remediation strategies, which led to greater visibility of the potential threats. One such risk for misconfigured Pod Security Standards is host mounting to the Kubernetes nodes. An engineer that can deploy and exec into a pod could host mount to any Kubernetes node and chroot to the mount as root.",
+							"▼ Identified improper usage and storage of the CA private key, which is used to sign certificates for root access to all Kubernetes nodes.", 
+							"▼ Collaborated with the Red Team to schedule and coordinate periodic penetration tests on the infrastructure, ensuring regular security assessments to identify vulnerabilities and strengthen defenses."
+						]
+					}
 				]
 			},
 			"skills": "Kubernetes · Helm (Software) · Ansible · HashiCorp Vault · Go · Python · Pandas (Software) · NumPy · SELinux · Sysdig · Falco Security · Trivy · Docker · ArgoCD"

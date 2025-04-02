@@ -71,12 +71,22 @@
 							{role.overview.summary}
 						</p>
 
-						{#each role.overview.contributions.entries() as [key, value]}
-							<p class="text-lg">{key}</p>
-							{#each value as v}
-								<p>{v}</p>
+						{#snippet details(entries: any, depth: number)}
+							{#each entries as [key, value]}
+								<p class="text-lg">{key}</p>
+
+								
+								{#each value as v}
+									{#if typeof v == 'string'}
+										<p style="padding-left: {depth * 40}px">{@html v}</p>
+									{:else}
+										{@render details(new Map(Object.entries(v)), depth + 1)}
+									{/if}
+								{/each}
 							{/each}
-						{/each}
+						{/snippet}
+
+						{@render details(role.overview.contributions.entries(), 0)}
 
 						<p class="text-lg">🧰 Skills:</p>
 						<p>{role.overview.skills}</p>

@@ -10,19 +10,68 @@
 		"overview": {
 			"summary": "As a security-focused engineer at Equinix Metal, I was responsible for securing the infrastructure supporting 220 applications across a global fleet of 80 Kubernetes clusters (800+ nodes), with over 5000 deployments.",
 			"contributions": {
-				"✅ Infrastructure Security": [
-					"▼ Secured and maintained infrastructure for critical applications, leveraging tools like Sysdig, Trivy, Falco, and HashiCorp Vault to ensure high security and reliability at scale."
+				"✅ Software Development": [
+					{
+						"▼ Open Source SSH monitoring Software (Go)": [
+							"▼ Used two goroutines to monitor OpenSSH logins and Auditd logs, sending specific actions to a correlation Go channel. A third goroutine then processed the actions, correlating authenticated user activity synchronously and forwarding the results to Splunk.",
+							"▼ Re-architected the software to support any Linux distro by abstracting how it monitors systemd and audit logs, creating a mental model for ingesters and processors, while eliminating approximately 1,000 lines of complex code.",
+							"▼ Further abstracted and simplified ingesters through the use of named pipes, providing a simple interface for ingesters to consume new events. Used the <strong>bufio.ReadString</strong> method, which blocks until a delimiter is matched or an error is returned, often <strong>io.EOF</strong> when the named pipe closes.",
+							"▼ Deployed the software across 80 Kubernetes clusters using ArgoCD and Helm. ArgoCD was used to manage the continuous delivery and synchronization of the application across the clusters, while Helm facilitated the deployment and management of the application’s configurations in a consistent and repeatable manner.",
+							"Find the source code here: (Software: <a class='text-sky-500' href='https://github.com/metal-toolbox/audito-maldito/tree/main'>Audito</a>) (Helm: <a class='text-sky-500' href='https://github.com/equinixmetal-helm/audito-maldito'>Chart</a>)"
+						]
+					},
+					{
+						"▼ HashiCorp Vault Kubernetes Auth Method Configuration (Go)": [
+							"▼ In a fast-paced, constantly changing environment, I developed a custom Go CLI tool to manage secret configurations for Kubernetes applications. This tool integrated with several in-house systems to ensure proper secret management configuration for 200 Kubernetes applications, automatically updating Vault configurations whenever the environment changed, such as when a new application was deployed to a cluster.",
+							"▼ This design provided a self service model for engineers, only requiring engineers to add their app secrets to Vault and add a few k8s annotations to their K8s Pod manifest e.g. <strong> vault.hashicorp.com/agent-inject-secret-database-config.txt</strong>",
+							"▼ This app retrieves the current state of the infrastructure through an exposed API, fetches user and group data from an internal IAM API, and accesses the current Vault configuration from the Vault REST API. It then identifies the necessary changes and applies them to Vault via the REST API.",
+							"▼ The code included a custom Vault <strong>http.Client</strong> with methods to access Vault's Auth, Identity, Mounts, and Policy endpoints, as well as services with a clean interface for interacting with internal APIs.",
+							"▼ Unit tests for the business logic were written using Go's <strong>testing</strong> package.",
+							"▼ Integration tests were run locally by spinning up a Vault Docker image, configuring Vault with the base configuration, running the CLI tool, and finally using the Vault client to validate that the correct configurations were applied."
+						]
+					},
+					{
+						"▼ Falco Rule Event Generator Test Sandbox (Go)": [
+							"▼ Falco is a cloud-native security tool that detects abnormal behavior, security threats, and compliance violations in real time across hosts, containers, Kubernetes, and cloud environments by leveraging custom rules on Linux kernel events and other data sources.",
+							"▼ Created a custom sandbox to validate that the Falco rules were written correctly before updating them in production. The sandbox consisted of a Minikube VM with Falco installed, configured with custom rules, and an event generator Go app that triggered events.",
+							"▼ The event generator app followed the design outlined in the <a href='https://github.com/falcosecurity/event-generator' class='text-sky-500'> falcosecurity/event-generator</a> repository. Each custom event test was written in a separate file and registered at startup. A test loop then ran each event, validating whether it was properly generated or ignored by connecting to the Falco gRPC socket."
+						]
+					}
 				],
-				"✅ Kubernetes Security": [
-					"▼ Identified and remediated several security vulnerabilities, including elevating Pod Security Standards to prevent privilege escalation risks.",
-					"▼ Secured sensitive Kubernetes secrets, such as the CA private key for root access, using HashiCorp Vault."
+				"✅ Security": [
+					{
+						"▼ Runtime Security": [
+							"▼ Managed Sysdig and deployed it using the Sysdig Operator via Helm. Additionally, I leveraged ArgoCD to automate continuous delivery and ensure seamless synchronization of the application across multiple clusters.",
+							"▼ Monitored runtime events, investigating any that appeared abnormal, such as a user accessing an etc container as root, to identify potential security threats or policy violations.",
+							"▼ Fine-tuned the runtime rules within the Sysdig SaaS platform, carefully balancing custom rulesets with the pre-configured managed rulesets to optimize security and minimize false positives."
+						]
+					},
+					{
+						"▼ Secrets Management": [
+							"▼ Deployed Enterprise HashiCorp Vault to Kubernetes, with one primary and one failover cluster. Each Vault deployment was configured with high availability (HA), consisting of 5 Vault servers: one active write server and 4 standby read servers, replicating data using the Raft consensus algorithm.",
+							"▼ Leveraged ArgoCD to automate continuous delivery and ensure seamless synchronization across environments.",
+							"▼ Configured Okta integration in Vault for user access management.",
+							"▼ Set up the Kubernetes Auth Method to enable secure authentication for Kubernetes clusters.",
+							"▼ Configured policies for users, groups, and applications to enforce access controls.",
+							"▼ Demoed the Kubernetes Auth Method to engineering teams, provided example app configurations, promoting its adoption and ensuring a smoother integration process."
+						]
+					},
+					{
+						"▼ Threat Modeling": [
+							"▼ Continuously performed threat model analysis as my understanding of the infrastructure and environment grew, which revealed additional potential threat vectors.",
+							"▼ Collaborated with the SRE team to schedule periodic CIS benchmark tests for Kubernetes environments using kube-bench.",
+							"▼ Identified gaps in Pod Security Standards, presented the associated risks to leadership, and proposed remediation strategies, which led to greater visibility of the potential threats. One such risk for misconfigured Pod Security Standards is host mounting to the Kubernetes nodes. An engineer that can deploy and exec into a pod could host mount to any Kubernetes node and chroot to the mount as root.",
+							"▼ Identified improper usage and storage of the CA private key, which is used to sign certificates for root access to all Kubernetes nodes.", 
+							"▼ Collaborated with the Red Team to schedule and coordinate periodic penetration tests on the infrastructure, ensuring regular security assessments to identify vulnerabilities and strengthen defenses."
+						]
+					}
 				],
-				"✅ Tool Integration": [
-					"▼ Deployed security tools via Helm and ArgoCD, integrating them with Splunk, Slack, Prometheus, and Grafana for centralized monitoring and alerting."
-				],
-				"✅ Bare Metal Kubernetes Configuration": [
-					"▼ Configured Kubernetes on bare metal using Flatcar Container Linux, Ansible playbooks, and kubeadm.",
-					"▼ Developed custom Go programs to monitor SSH logins for SOC2 compliance and to extract and visualize Trivy vulnerability metrics across clusters in Grafana dashboards."
+				"✅ SRE": [
+					"▼ Assisted in troubleshooting and debugging Kubernetes issues by analyzing logs, investigating node and pod configurations, and identifying performance bottlenecks or misconfigurations to ensure the smooth operation of the Kubernetes clusters.",
+					"▼ Collaborated with the Database Administrator (DBA) team to implement LUKS (Linux Unified Key Setup) disk encryption across all database nodes, ensuring data protection at rest and enhancing the overall security posture of the database infrastructure.",
+					"▼ Attempted to enable SELinux on Flatcar Container Linux by resolving label mismatches and updating to the latest open-source SELinux reference policy to enhance security and compliance across the containerized environment. However, it appears that Flatcar Container Linux does not fully support SELinux with Kubernetes, despite what is suggested in the documentation.",
+					"▼ Collaborated with the SRE team to enable node-to-node encryption using WireGuard, addressing the issue of Ceph replication occurring in clear text.",
+					"▼ Configured the necessary Ignition files to enable and set up Auditd for system auditing."
 				]
 			},
 			"skills": "Kubernetes · Helm (Software) · Ansible · HashiCorp Vault · Go · Python · Pandas (Software) · NumPy · SELinux · Sysdig · Falco Security · Trivy · Docker · ArgoCD"

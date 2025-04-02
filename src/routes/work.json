@@ -12,7 +12,7 @@
 			"contributions": {
 				"✅ Software Development": [
 					{
-						"▼ Open Source SSH monitoring Software": [
+						"▼ Open Source SSH monitoring Software (Go)": [
 							"▼ Used two goroutines to monitor OpenSSH logins and Auditd logs, sending specific actions to a correlation Go channel. A third goroutine then processed the actions, correlating authenticated user activity synchronously and forwarding the results to Splunk.",
 							"▼ Re-architected the software to support any Linux distro by abstracting how it monitors systemd and audit logs, creating a mental model for ingesters and processors, while eliminating approximately 1,000 lines of complex code.",
 							"▼ Further abstracted and simplified ingesters through the use of named pipes, providing a simple interface for ingesters to consume new events. Used the <strong>bufio.ReadString</strong> method, which blocks until a delimiter is matched or an error is returned, often <strong>io.EOF</strong> when the named pipe closes.",
@@ -21,12 +21,20 @@
 						]
 					},
 					{
-						"▼ HashiCorp Vault Kubernetes Auth Method Configuration": [
+						"▼ HashiCorp Vault Kubernetes Auth Method Configuration (Go)": [
 							"▼ In a fast-paced, constantly changing environment, I developed a custom Go CLI tool to manage secret configurations for Kubernetes applications. This tool integrated with several in-house systems to ensure proper secret management configuration for 200 Kubernetes applications, automatically updating Vault configurations whenever the environment changed, such as when a new application was deployed to a cluster.",
-							"▼ This app retrieves the current state of the infrastructure through an exposed API, fetches user and group data from an internal IAM API, and accesses the current Vault configuration. It then identifies the necessary changes and applies them to Vault via a REST API.",
+							"▼ This design provided a self service model for engineers, only requiring engineers to add their app secrets to Vault and add a few k8s annotations to their K8s Pod manifest e.g. <strong> vault.hashicorp.com/agent-inject-secret-database-config.txt</strong>",
+							"▼ This app retrieves the current state of the infrastructure through an exposed API, fetches user and group data from an internal IAM API, and accesses the current Vault configuration from the Vault REST API. It then identifies the necessary changes and applies them to Vault via the REST API.",
 							"▼ The code included a custom Vault <strong>http.Client</strong> with methods to access Vault's Auth, Identity, Mounts, and Policy endpoints, as well as services with a clean interface for interacting with internal APIs.",
 							"▼ Unit tests for the business logic were written using Go's <strong>testing</strong> package.",
 							"▼ Integration tests were run locally by spinning up a Vault Docker image, configuring Vault with the base configuration, running the CLI tool, and finally using the Vault client to validate that the correct configurations were applied."
+						]
+					},
+					{
+						"▼ Falco Rule Event Generator Test Sandbox (Go)": [
+							"▼ Falco is a cloud-native security tool that detects abnormal behavior, security threats, and compliance violations in real time across hosts, containers, Kubernetes, and cloud environments by leveraging custom rules on Linux kernel events and other data sources.",
+							"▼ I created a custom sandbox to validate that the Falco rules were written correctly before updating them in production. The sandbox consisted of a Minikube VM with Falco installed, configured with custom rules, and an event generator Go app that triggered events.",
+							"▼ The event generator app followed the design outlined in the <a href='https://github.com/falcosecurity/event-generator' class='text-sky-500'> falcosecurity/event-generator</a> repository. Each custom event test was written in a separate file and registered at startup. A test loop then ran each event, validating whether it was properly generated or ignored by connecting to the Falco gRPC socket."
 						]
 					}
 				],

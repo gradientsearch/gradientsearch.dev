@@ -65,6 +65,13 @@
 							"▼ Collaborated with the Red Team to schedule and coordinate periodic penetration tests on the infrastructure, ensuring regular security assessments to identify vulnerabilities and strengthen defenses."
 						]
 					}
+				],
+				"✅ SRE": [
+					"▼ Assisted in troubleshooting and debugging Kubernetes issues by analyzing logs, investigating node and pod configurations, and identifying performance bottlenecks or misconfigurations to ensure the smooth operation of the Kubernetes clusters.",
+					"▼ Collaborated with the Database Administrator (DBA) team to implement LUKS (Linux Unified Key Setup) disk encryption across all database nodes, ensuring data protection at rest and enhancing the overall security posture of the database infrastructure.",
+					"▼ Attempted to enable SELinux on Flatcar Container Linux by resolving label mismatches and updating to the latest open-source SELinux reference policy to enhance security and compliance across the containerized environment. However, it appears that Flatcar Container Linux does not fully support SELinux with Kubernetes, despite what is suggested in the documentation.",
+					"▼ Collaborated with the SRE team to enable node-to-node encryption using WireGuard, addressing the issue of Ceph replication occurring in clear text.",
+					"▼ Configured the necessary Ignition files to enable and set up Auditd for system auditing."
 				]
 			},
 			"skills": "Kubernetes · Helm (Software) · Ansible · HashiCorp Vault · Go · Python · Pandas (Software) · NumPy · SELinux · Sysdig · Falco Security · Trivy · Docker · ArgoCD"

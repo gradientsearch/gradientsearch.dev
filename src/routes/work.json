@@ -10,6 +10,16 @@
 		"overview": {
 			"summary": "As a security-focused engineer at Equinix Metal, I was responsible for securing the infrastructure supporting 220 applications across a global fleet of 80 Kubernetes clusters (800+ nodes), with over 5000 deployments.",
 			"contributions": {
+				"✅ Software Development": [
+					{
+						"▼ Open Source Compliance SSH monitoring Software": [
+							"▼ Used two goroutines to monitor OpenSSH logins and Auditd logs, sending specific actions to a correlation Go channel. A third goroutine then processed the actions, correlating authenticated user activity synchronously and forwarding the results to Splunk.",
+							"▼ Re-architected the software to support any Linux distro by abstracting how it monitors systemd and audit logs, creating a mental model for ingesters and processors, while eliminating approximately 1,000 lines of complex code.",
+							"▼ Further abstracted and simplified ingesters through the use of named pipes, providing a simple interface for ingesters to consume new events. Used the <strong>bufio.ReadString</strong> method, which blocks until a delimiter is matched or an error is returned, often <strong>io.EOF</strong> when the named pipe closes.",
+							"Find the source code here: <a class='text-sky-500' href='https://github.com/metal-toolbox/audito-maldito/tree/main'>Audito</a>"
+						]
+					}
+				],
 				"✅ Infrastructure Security": [
 					"▼ Secured and maintained infrastructure for critical applications, leveraging tools like Sysdig, Trivy, Falco, and HashiCorp Vault to ensure high security and reliability at scale."
 				],
@@ -21,8 +31,7 @@
 					"▼ Deployed security tools via Helm and ArgoCD, integrating them with Splunk, Slack, Prometheus, and Grafana for centralized monitoring and alerting."
 				],
 				"✅ Bare Metal Kubernetes Configuration": [
-					"▼ Configured Kubernetes on bare metal using Flatcar Container Linux, Ansible playbooks, and kubeadm.",
-					"▼ Developed custom Go programs to monitor SSH logins for SOC2 compliance and to extract and visualize Trivy vulnerability metrics across clusters in Grafana dashboards."
+					"▼ Configured Kubernetes on bare metal using Flatcar Container Linux, Ansible playbooks, and kubeadm."
 				]
 			},
 			"skills": "Kubernetes · Helm (Software) · Ansible · HashiCorp Vault · Go · Python · Pandas (Software) · NumPy · SELinux · Sysdig · Falco Security · Trivy · Docker · ArgoCD"

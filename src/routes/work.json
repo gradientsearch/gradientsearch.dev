@@ -74,7 +74,7 @@
 					"▼ Configured the necessary Ignition files to enable and set up Auditd for system auditing."
 				]
 			},
-			"skills": "Kubernetes · Helm (Software) · Ansible · HashiCorp Vault · Go · Python · Pandas (Software) · NumPy · SELinux · Sysdig · Falco Security · Trivy · Docker · ArgoCD"
+			"skills": "Kubernetes · Helm · Ansible · HashiCorp Vault · Go · Python · Pandas · NumPy · SELinux · Sysdig · Falco Security · Trivy · Docker · ArgoCD"
 		}
 	},
 	{
@@ -126,7 +126,7 @@
 					}
 				]
 			},
-			"skills": "Kubernetes · Helm Charts · ArgoCD · Python · Go · MLOps"
+			"skills": "Kubernetes · Helm · ArgoCD · Python · Go · MLOps"
 		}
 	},
 	{
@@ -140,18 +140,22 @@
 		"overview": {
 			"summary": "As a freelancer, designed a thread-safe, modular C++ application to connect to facility cameras over RTSP, detect motion in restricted areas, and alert on safety violations. Leveraged ML and computer vision to enhance security and automate safety monitoring. Deployed the solution to Kubernetes clusters at manufacturing plants for scalable, real-time monitoring.",
 			"contributions": {
-				"✅ Thread-Safe, Modular C++ Program": [
+				"✅ Software Development": [
 					"▼ Designed a thread-safe, modular C++ application to interface with facility cameras over RTSP, continuously reading frames and pushing them to a mutex-protected queue.",
-					"▼ Implemented worker threads to process frames, detect motion in restricted areas, and call a gRPC Yolo5 endpoint for object detection."
+					"▼ Implemented worker threads to process frames, utilizing the decorator pattern. Each decorator was responsible for specific tasks, including masking the frame, detecting motion, reducing the frame size, and calling the gRPC object detection endpoint.",
+					"▼ Stored detections in a MinIO S3 bucket."
 				],
-				"✅ Safety Violation Alerts": [
-					"▼ Developed a system to detect and alert on safety violations based on detected objects in motion, ensuring real-time monitoring and rapid response."
+				"✅ Data Science": [
+					"▼ Used a pretrained YOLOv5s ONNX model loaded into the OpenCV Deep Neural Network Python module, configured to run on Nvidia GPUs using CUDA.",
+					"▼ Exposed a multi-threaded Python gRPC server with an object classification endpoint, returning detected objects."
 				],
-				"✅ Containerization & Deployment": [
-					"▼ Containerized the C++ program and the pretrained Yolo5 model, deploying them to Kubernetes clusters using Helm for scalable, reliable execution."
+				"✅ SRE": [
+					"▼ Containerized both the C++ application and the Python gRPC server.",
+					"▼ Deployed the application using a Helm chart, modifying values based on each manufacturing facility.",
+					"▼ Streamlined the C++ program by limiting it to interface with a single facility camera, as each facility camera was assigned its own deployment through a Helm range loop."
 				]
 			},
-			"skills": "C++ · Helm (Software) · Kubernetes · Yolo5"
+			"skills": "C++ · Python · Helm · Kubernetes · Yolo5 · OpenCV"
 		}
 	},
 	{

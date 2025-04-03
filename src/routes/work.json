@@ -42,7 +42,7 @@
 					{
 						"▼ Runtime Security": [
 							"▼ Managed Sysdig and deployed it using the Sysdig Operator via Helm. Additionally, I leveraged ArgoCD to automate continuous delivery and ensure seamless synchronization of the application across multiple clusters.",
-							"▼ Monitored runtime events, investigating any that appeared abnormal, such as a user accessing an etc container as root, to identify potential security threats or policy violations.",
+							"▼ Monitored runtime events, investigating any that appeared abnormal, such as a user accessing an etcd container as root, to identify potential security threats or policy violations.",
 							"▼ Fine-tuned the runtime rules within the Sysdig SaaS platform, carefully balancing custom rulesets with the pre-configured managed rulesets to optimize security and minimize false positives."
 						]
 					},
@@ -61,7 +61,7 @@
 							"▼ Continuously performed threat model analysis as my understanding of the infrastructure and environment grew, which revealed additional potential threat vectors.",
 							"▼ Collaborated with the SRE team to schedule periodic CIS benchmark tests for Kubernetes environments using kube-bench.",
 							"▼ Identified gaps in Pod Security Standards, presented the associated risks to leadership, and proposed remediation strategies, which led to greater visibility of the potential threats. One such risk for misconfigured Pod Security Standards is host mounting to the Kubernetes nodes. An engineer that can deploy and exec into a pod could host mount to any Kubernetes node and chroot to the mount as root.",
-							"▼ Identified improper usage and storage of the CA private key, which is used to sign certificates for root access to all Kubernetes nodes.", 
+							"▼ Identified improper usage and storage of the CA private key, which is used to sign certificates for root access to all Kubernetes nodes.",
 							"▼ Collaborated with the Red Team to schedule and coordinate periodic penetration tests on the infrastructure, ensuring regular security assessments to identify vulnerabilities and strengthen defenses."
 						]
 					}
@@ -88,14 +88,42 @@
 		"overview": {
 			"summary": "In the Infosec organization, I focused on data science initiatives and leveraged automation to strengthen security measures. I contributed to enhancing Equinix's security posture while improving operational efficiency across global infrastructure through data-driven insights and best practices.",
 			"contributions": {
-				"✅ Infosec Data Science Initiatives": [
-					"▼ Coordinated the build of a dedicated Infosec Kubernetes cluster in Equinix Metal with 6 m3.large.x86 servers.",
-					"▼ Designed a data lake strategy and created a generic data ingest K8s deployment to collect security feeds and logs using rsyslog and Fluentbit.",
-					"▼ Utilized Argo Workflows DAGs to manage the ML pipeline steps for processing security data."
+				"✅ Software Development": [
+					{
+						"▼ Security Architecture Review (Go, Angular, PostgreSQL)": [
+							"▼ Designed and developed a full-stack application to automate Security Architecture Reviews, significantly reducing the bottleneck of manual reviews and shortening review times from 3 months to just 30 minutes in some cases.",
+							"▼ Developed the web app using Angular, Typescript, Bootstrap 4, and SCSS, with a responsive design based on the <a href='https://github.com/akveo/ngx-admin' class='text-sky-500'>ngx-admin</a> template. Unit tests were written using Jasmine and Karma.",
+							"▼ Integrated PingID using OIDC for Single Sign-On (SSO). The web app included an authentication module that dynamically displayed user options based on roles (e.g., admin, reviewer). The app server validated the user's OIDC token and provided a JWT token for future authentication and authorization (Authn/z) during REST API calls.",
+							"▼ The backend server was written in Go, leveraging the <a href='https://github.com/ardanlabs/service/tree/master' class='text-sky-500'>Service</a> framework. To ensure clean separation of program boundaries, the code was structured into API, business, and storage packages. Since this was an internal app with a low user volume, the focus was on code correctness, integrity, and maintainability.",
+							"▼ Data was stored in a PostgreSQL database with a simple schema to track relationships between users and reviews.",
+							"▼ Hosted the app in Kubernetes, deployed with ArgoCD and Helm charts."
+						]
+					}
 				],
-				"✅ Security Automation & Best Practices": [
-					"▼ Automated the collection of global PAN firewall logs during a ransomware attack in 2020 to support the Red Team.",
-					"▼ Advised IT teams on security best practices, such as key rotation and access control to minimize security risks."
+				"✅ Data Science": [
+					{
+						"▼ ML Engineering": [
+							"▼ Coordinated the creation of a dedicated Infosec Kubernetes cluster on Equinix Metal to capture events specific to Equinix's unique environment, addressing gaps that off-the-shelf products did not cover.",
+							"▼ Designed a data lake strategy to ingest and store data from various security streams, partitioned in S3 buckets for future processing and training.",
+							"▼ Created a generic data ingestion deployment in Kubernetes to collect security feeds and logs using rsyslog and Fluentbit. Since Fluentbit's syslog module doesn't support TLS encryption, rsyslog was used to ingest the streams, and Fluentbit was responsible for uploading batched stream data to Minio S3 buckets, denormalized based on features like application, region, and IP address.",
+							"▼ Due to the absence of a Helm chart for Kubeflow, the team used Argo Workflows DAGs to manage machine learning (ML) pipeline steps for processing security data."
+						]
+					}
+				],
+				"✅ Security": [
+					{
+						"▼ 2020 Ransomware Attack": [
+							"▼ Played a key role in remediating Equinix’s 2020 ransomware attack by collaborating with Red Teams to assess infrastructure and security posture across environments.",
+							"▼ Automated the collection of global PAN firewall logs during the ransomware attack to support the Red Team's investigation.",
+							"▼ Advised IT teams on security best practices, including key rotation and access control measures, to minimize security risks during the incident.",
+							"▼ Procured encrypted data from affected hosts as requested by the Red Team."
+						]
+					},
+					{
+						"▼ Threat Modeling": [
+							"▼ Assessed the firmware security risks for Equinix Metal servers and evaluated vendor solutions to protect firmware integrity."
+						]
+					}
 				]
 			},
 			"skills": "Kubernetes · Helm Charts · ArgoCD · Python · Go · MLOps"

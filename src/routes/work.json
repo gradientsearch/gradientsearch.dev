@@ -108,6 +108,15 @@
 							"▼ Created a generic data ingestion deployment in Kubernetes to collect security feeds and logs using rsyslog and Fluentbit. Since Fluentbit's syslog module doesn't support TLS encryption, rsyslog was used to ingest the streams, and Fluentbit was responsible for uploading batched stream data to Minio S3 buckets, denormalized based on features like application, region, and IP address.",
 							"▼ Due to the absence of a Helm chart for Kubeflow, the team used Argo Workflows DAGs to manage machine learning (ML) pipeline steps for processing security data."
 						]
+					},
+					{
+						"Internship Program Leadership & Phishing Detection": [
+							"▼ Led two internship programs with college students, teaching fundamental skills in software development, machine learning, and product development.",
+							"▼ Guided interns in creating a homegrown solution to detect phishing sites using the UCI phishing website dataset to train machine learning models.",
+							"▼ Exposed the trained models via a REST API endpoint, allowing easy integration with other applications and services.",
+							"▼ Developed a Microsoft Outlook add-in that enabled users to validate if an email contained a phishing site, providing a practical application of machine learning and security concepts.",
+							"▼ Mentored interns in full-stack development, data science, and security practices, fostering hands-on learning and real-world problem-solving."
+						]
 					}
 				],
 				"✅ Security": [
@@ -126,7 +135,7 @@
 					}
 				]
 			},
-			"skills": "Kubernetes · Helm · ArgoCD · Python · Go · MLOps"
+			"skills": "Kubernetes · Helm · ArgoCD · Python · Go · MLOps · Threat Modeling"
 		}
 	},
 	{
@@ -165,24 +174,36 @@
 		"end": "2020",
 		"iconPath": "work/global.svg",
 		"href": "https://www.globalpayments.com/",
-		"summary": "Automated the manual review of enterprise application logs for PCI compliance by developing an extensible ML pipeline in Kubeflow and a web application for scheduling log reviews and validating model predictions. This solution significantly reduced manual effort and improved efficiency by enabling automated anomaly detection for PCI compliance.",
+		"summary": "Automated the manual review of enterprise application logs for PCI compliance by developing an extensible ML pipeline in Kubeflow and a web application for scheduling log reviews and validating model predictions. This solution significantly reduced manual effort and improved efficiency by enabling automated anomaly detection for PCI compliance. Was a member of the security architecture review panel ensure alignment of projects with the company’s overall security objectives and standards.",
 		"overview": {
-			"summary": "Automated the manual review of enterprise application logs for PCI compliance by developing an extensible ML pipeline in Kubeflow and a web application for scheduling log reviews and validating model predictions. This solution significantly reduced manual effort and improved efficiency by enabling automated anomaly detection for PCI compliance.",
+			"summary": "Automated the manual review of enterprise application logs for PCI compliance by developing an extensible ML pipeline in Kubeflow and a web application for scheduling log reviews and validating model predictions. This solution significantly reduced manual effort and improved efficiency by enabling automated anomaly detection for PCI compliance. Was a member of the security architecture review panel ensuring alignment of projects with the company’s overall security objectives and standards.",
 			"contributions": {
-				"✅ Automated Log Review Process": [
-					"▼ Developed a generic ML pipeline to automate the review of application logs for PCI compliance, replacing the manual process for log owners."
+				"✅ Software Development": [
+					"▼ Developed a web app that allows app owners to schedule log reviews and easily validate detected anomalies.",
+					"▼ Built the web app using Angular, TypeScript, Bootstrap 4, and SCSS, with a responsive design based on the ngx-admin template. Unit tests were written using Jasmine and Karma.",
+					"▼ Integrated Google's OAuth 2.0 with OIDC for Single Sign-On (SSO). The web app included an authentication module that dynamically displayed user options based on roles (e.g., admin, reviewer). The app server validated the user's OIDC token and provided a JWT token for future authentication and authorization (Authn/z).",
+					"▼ Utilized OpenAPI Generator with an OpenAPI 3.0 specification file to automatically generate a Flask CORS Python server. This automated the creation of controllers based on routes. The code was structured according to the Open/Closed principle: open for extension but closed for modification.",
+					"▼ Used MySQL for app data storage and MongoDB to store detected anomalies."
 				],
-				"✅ End-to-End ML Pipeline": [
-					"▼ Built extract, clean, transform, train, and predict scripts using Scikit-Learn, Pandas, and Numpy."
+				"✅ Data Science": [
+					"▼ Built generic extract, clean, transform, train, and predict scripts using Scikit-Learn, Pandas, and NumPy, designed for use with several application logs.",
+					"▼ Containerized steps to use in Kubeflow pipelines.",
+					"▼ Developed two Kubeflow pipelines—one for training models and one for prediction.",
+					"▼ Ran nightly prediction pipeline batch jobs on app logs, tracking anomalous logs for app owner review to adhere to PCI requirements.",
+					"▼ Trained an unsupervised K-Means algorithm on log data, using the Silhouette Score to measure clustering results. Filtered out noise by reducing high-dimensional data into a lower-dimensional space using Principal Component Analysis (PCA)."
 				],
-				"✅ Anomaly Detection": [
-					"▼ Trained an unsupervised K-Means algorithm on log data to predict anomalous log entries, flagging any new samples that were 2 standard deviations away from their cluster centroid."
+				"✅ SRE": [
+					"▼ Deployed Kubeflow, MySQL, MongoDB, and the web application to Google Kubernetes Engine (GKE).",
+					"▼ Managed MySQL, MongoDB, and the web app via Helm."
 				],
-				"✅ Web Application Integration": [
-					"▼ Developed a web interface enabling app owners to schedule log reviews and easily validate the model's predictions."
+				"✅ Security": [
+					"▼ Was a member of the security architecture review panel, providing subject matter expertise (SME) to ensure alignment of projects with the company’s overall security objectives and standards.",
+					"▼ Conducted comprehensive reviews of proposed designs and solutions, identifying potential security risks and recommending mitigations, with a focus on ensuring compliance with NIST 800-53 and ISO 27001 frameworks.",
+					"▼ Collaborated with cross-functional teams to assess the security posture of system designs, ensuring adherence to company security standards, including encryption requirements, access controls, and network security.",
+					"▼ Reviewed data flow diagrams and system integrations to evaluate potential vulnerabilities, ensuring proper handling of sensitive data and compliance with privacy regulations (e.g., PCI, GDPR)."
 				]
 			},
-			"skills": "Kubernetes · Kubeflow · Scikit-Learn · NumPy · Pandas (Software) · Web Development · Angular Material · OIDC · MongoDB"
+			"skills": "Kubernetes · Kubeflow · Scikit-Learn · NumPy · Pandas · Web Development · Angular Material · OIDC · MongoDB · NIST 800-53 · ISO 27001"
 		}
 	},
 	{
@@ -208,7 +229,7 @@
 					"▼ Led a joint project with McAfee to classify the severity of SIEM alerts using machine learning, automating alert reporting and prioritizing alerts for SOC analysts."
 				]
 			},
-			"skills": "Java · JavaScript · Angular Material · HTML · Bootstrap (Framework) · JUnit · Unit Testing · Python · Scikit-Learn · NumPy · Pandas (Software) · Machine Learning"
+			"skills": "Java · JavaScript · Angular Material · HTML · Bootstrap · JUnit · Unit Testing · Python · Scikit-Learn · NumPy · Pandas · Machine Learning"
 		}
 	}
 ]

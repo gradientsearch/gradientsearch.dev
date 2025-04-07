@@ -52,6 +52,11 @@ export const posts: post[] = [
 		title: 'Effortless Dependency Management: A Step-by-Step Guide to Renovate Bot',
 		description: `This blog post demonstrates how to automate dependency management using Renovate Bot, an open-source tool that helps keep your project's dependencies up to date by automatically creating pull requests for version updates. I’ll walk you through the process of setting up Renovate Bot for this website, saving time and ensuring your dependencies are always current and secure.`,
 		date: '2025-04-01'
+	},
+	{
+		id: '9',
+		title: 'Completed Ultimate Go Language Guide Course',
+		description: `After completing the course, I deepened my understanding of writing efficient, idiomatic Go code. I explored Go internals, learned to balance readability and performance, and focused on package-oriented design for better maintainability and long-term success.`,
+		date: '2025-04-07'
 	}
-
 ];

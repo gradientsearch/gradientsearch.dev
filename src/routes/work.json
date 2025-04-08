@@ -217,19 +217,25 @@
 		"overview": {
 			"summary": "Split time between software development and machine learning research, working on projects to enhance security and automate processes for government sponsors. Led a joint project with McAfee to classify the severity of SIEM alerts using machine learning, automating alert reporting and prioritizing alerts for SOC analysts. Focused on advancing software security and applying ML to improve security operations and threat detection.",
 			"contributions": {
-				"✅ Security & Software Development": [
-					"▼ Improved a government-sponsored email and file management web app by implementing the Bell-LaPadula security model.",
+				"✅ Software Development": [
+					"▼ Developed a web app similar to Gmail and Google Drive, with additional features for classifying emails and files (e.g., Secret or Top Secret) using Angular, Bootstrap, Tomcat, Jersey, and Jackson. ",
+					"▼ Implemented security by design, applying the Bell-LaPadula security model in code.",
+					"▼ Developed a Windows Presentation Foundation (WPF) File Management product, adding features for classification using custom file metadata fields, integrated with the same API used for the web app."
+				],
+				"✅ SRE": [
+					"▼ Explored deploying services to OpenShift.",
+					"▼ Demonstrated deploying services to OpenShift at monthly lunch-and-learn sessions."
+				],
+				"✅ Security": [
 					"▼ Applied industry-standard security practices to secure data at rest, in transit, and in use.",
-					"▼ Refactored the existing monolithic application into modular components using Angular, Bootstrap, Tomcat, Jersey, and Jackson."
+					"▼ Attended a CISSP bootcamp and obtained CISSP certification, as required for the role."
 				],
-				"✅ Adversarial Machine Learning Research": [
-					"▼ Conducted research on adversarial machine learning attack prevention and detection techniques against various machine learning algorithms (SVM, Neural Networks, Decision Trees, Random Forests, KNN, etc.)."
-				],
-				"✅ Lead Machine Learning Engineer – SIEM Project": [
+				"✅ Data Science": [
+					"▼ Conducted research on adversarial machine learning attack prevention and detection techniques against various algorithms (e.g., SVM, Neural Networks, Decision Trees, Random Forests, KNN, etc.).",
 					"▼ Led a joint project with McAfee to classify the severity of SIEM alerts using machine learning, automating alert reporting and prioritizing alerts for SOC analysts."
 				]
 			},
-			"skills": "Java · JavaScript · Angular Material · HTML · Bootstrap · JUnit · Unit Testing · Python · Scikit-Learn · NumPy · Pandas · Machine Learning"
+			"skills": "Java · C# · JavaScript · Angular Material · HTML · Bootstrap · JUnit · Unit Testing · Python · Scikit-Learn · NumPy · Pandas · Machine Learning"
 		}
 	}
 ]

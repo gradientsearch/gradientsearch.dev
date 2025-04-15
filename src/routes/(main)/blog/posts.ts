@@ -58,5 +58,11 @@ export const posts: post[] = [
 		title: 'Completed Ultimate Go Language Guide Course',
 		description: `After completing the course, I deepened my understanding of writing efficient, idiomatic Go code. I explored Go internals, learned to balance readability and performance, and focused on package-oriented design for better maintainability and long-term success.`,
 		date: '2025-04-07'
+	},
+	{
+		id: '10',
+		title: 'Exposing Go Internals: Setting Up Debug Endpoints',
+		description: `In this post, we’ll walk through setting up debug endpoints to profile your Go application in real time. We'll also integrate Statsviz to provide a user-friendly GUI for visualizing metrics like heap usage and goroutine activity. To make things more interesting, we’ll simulate load by sending a burst of requests to a liveness endpoint, allowing us to see how the heap and goroutine count respond under pressure.`,
+		date: '2025-04-15'
 	}
 ];

@@ -35,7 +35,7 @@
 		><a
 			class="group -m-1 rounded-full p-1 focusable"
 			aria-label="Follow on LinkedIn"
-			href="https://linkedin.com/in/stephenodwyer/"
+			href="https://www.linkedin.com/in/stephenodwyer/"
 			target="_blank"
 			><svg
 				aria-hidden="true"
@@ -99,7 +99,7 @@
 		><a
 			class="group -m-1 rounded-full p-1 focusable flex flex-row"
 			aria-label="Follow on LinkedIn"
-			href="https://linkedin.com/in/stephenodwyer/"
+			href="https://www.linkedin.com/in/stephenodwyer/"
 			target="_blank"
 			><svg
 				aria-hidden="true"

@@ -9,7 +9,6 @@
 	function toggleDropdown() {
 		isOpen = !isOpen;
 	}
-
 </script>
 
 <div class="flex items-center justify-center lg:hidden">
@@ -46,7 +45,7 @@
 			</div>
 		{/snippet}
 	</Popover>
-<!-- 
+	<!-- 
 	<button
 		class="m-0 pe-3 pb-0"
 		type="button"

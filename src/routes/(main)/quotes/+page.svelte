@@ -66,29 +66,25 @@
 		<ArrowUp size={64}></ArrowUp>
 	</button>
 
+	<nav class="p-4 my-16">
+		<!-- Table of Contents -->
+		<div class="text-sm space-y-2">
+			<!-- Label -->
+			<div class="font-bold">On This Page</div>
+			<!-- Links -->
+			<ul class="space-y-2">
+				{#each quotes as [k, v]}
+					<li>
+						<a href={'#' + k.toLocaleLowerCase().replaceAll(' ', '-')} class="anchor block">
+							{k}
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</div>
+	</nav>
 
-<nav class="p-4 my-16">
-	<!-- Table of Contents -->
-	<div class="text-sm space-y-2">
-	  <!-- Label -->
-	  <div class="font-bold">On This Page</div>
-	  <!-- Links -->
-	  <ul class="space-y-2">
-		{#each quotes as [k, v]}
-		<li>
-			<a href={'#'+k.toLocaleLowerCase().replaceAll(' ', '-')} class="anchor block">
-			  {k }
-			</a>
-		  </li>
-
-		{/each}
-
-	  </ul>
-	</div>
-  </nav>
-
-
-	<div >
+	<div>
 		{#each quotes as [k, v]}
 			<article>
 				<header class="flex flex-row items-center">

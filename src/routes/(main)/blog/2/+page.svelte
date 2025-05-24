@@ -149,7 +149,6 @@ jobs:
 
 	<PageParagraph>Let's dive into the steps!</PageParagraph>
 
-
 	<div>
 		<PageHeader className="">1. Configuring Svelte to Build a Static Site</PageHeader>
 

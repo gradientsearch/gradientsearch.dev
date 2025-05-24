@@ -13,7 +13,7 @@
 	let backText = 'blog';
 	let backHref = '/blog';
 
-let mapOfMutexes = `
+	let mapOfMutexes = `
 import (
 	"fmt"
 	"sync"
@@ -86,9 +86,9 @@ func (me *mentry) Unlock() {
 	e.el.Unlock()
 
 }
-`
+`;
 
-let mapOfMutexesTests = `
+	let mapOfMutexesTests = `
 import (
 	"math/rand"
 	"strconv"
@@ -172,11 +172,11 @@ func BenchmarkM(b *testing.B) {
 
 }
 
-`
+`;
 
-let use = `bundlePath := fmt.Sprintf("%s/%s/bundles/%s", BUNDLE_SCHEMA, ownerEntityID, bundleID)
+	let use = `bundlePath := fmt.Sprintf("%s/%s/bundles/%s", BUNDLE_SCHEMA, ownerEntityID, bundleID)
 bundleLock := bundleMapOfMu.Lock(bundlePath)
-defer bundleLock.Unlock()`
+defer bundleLock.Unlock()`;
 </script>
 
 <PageLayout {backHref} {backText} {title} {date}>
@@ -202,28 +202,25 @@ defer bundleLock.Unlock()`
 
 	<PageParagraph>
 		In some cases, you can find gems on Stack Overflow. However, rarely do the gems come with tests.
-		The following map of mutexes code was pulled from this <a class="text-primary-500"
+		The following map of mutexes code was pulled from this <a
+			class="text-primary-500"
 			href="https://stackoverflow.com/questions/40931373/how-to-gc-a-map-of-mutexes-in-go"
 			target="_blank">SO</a
-		> question and provided by <a class="text-primary-500" href="https://stackoverflow.com/users/961810/brad-peabody" target="_blank">Brad Peabody</a>.
+		>
+		question and provided by
+		<a
+			class="text-primary-500"
+			href="https://stackoverflow.com/users/961810/brad-peabody"
+			target="_blank">Brad Peabody</a
+		>.
 	</PageParagraph>
 
-
-
-	<PageParagraph>
-		Map Of Mutexes:
-	</PageParagraph>
+	<PageParagraph>Map Of Mutexes:</PageParagraph>
 	<Code code={mapOfMutexes} lang="go"></Code>
 
-	<PageParagraph>
-		Map Of Mutexes Tests:
-	</PageParagraph>
+	<PageParagraph>Map Of Mutexes Tests:</PageParagraph>
 	<Code code={mapOfMutexesTests} lang="go"></Code>
 
-	<PageParagraph>
-		Locking A Bundle:
-	</PageParagraph>
+	<PageParagraph>Locking A Bundle:</PageParagraph>
 	<Code code={use} lang="go"></Code>
-
-
 </PageLayout>

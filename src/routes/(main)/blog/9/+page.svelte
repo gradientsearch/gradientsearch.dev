@@ -14,7 +14,7 @@
 </script>
 
 <PageLayout {backHref} {backText} {title} {date}>
-	<PageSubtitle className="underline underline-offset-8 decoration-sky-500 capitalize" 
+	<PageSubtitle className="underline underline-offset-8 decoration-sky-500 capitalize"
 		>type is life! type is life! 😆</PageSubtitle
 	>
 	<img src="{base}/blog/9/cert.jpg" alt="cert" />

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { ArrowUp, Link } from 'lucide-svelte';
-	import Simple from '../../../components/layout/simple.svelte';
 
 	import { quotes } from './quotes';
 	import { onMount } from 'svelte';
@@ -67,9 +66,29 @@
 		<ArrowUp size={64}></ArrowUp>
 	</button>
 
-	<TableOfContents class="my-16" />
 
-	<div use:tocCrawler={{ mode: 'generate' }}>
+<nav class="p-4 my-16">
+	<!-- Table of Contents -->
+	<div class="text-sm space-y-2">
+	  <!-- Label -->
+	  <div class="font-bold">On This Page</div>
+	  <!-- Links -->
+	  <ul class="space-y-2">
+		{#each quotes as [k, v]}
+		<li>
+			<a href={'#'+k.toLocaleLowerCase().replaceAll(' ', '-')} class="anchor block">
+			  {k }
+			</a>
+		  </li>
+
+		{/each}
+
+	  </ul>
+	</div>
+  </nav>
+
+
+	<div >
 		{#each quotes as [k, v]}
 			<article>
 				<header class="flex flex-row items-center">

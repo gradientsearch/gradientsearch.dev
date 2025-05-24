@@ -149,9 +149,8 @@ jobs:
 
 	<PageParagraph>Let's dive into the steps!</PageParagraph>
 
-	<TableOfContents />
 
-	<div use:tocCrawler={{ mode: 'generate' }}>
+	<div>
 		<PageHeader className="">1. Configuring Svelte to Build a Static Site</PageHeader>
 
 		<PageParagraph>Disable SSR, enable prerendering, and remove trailing slashes.</PageParagraph>

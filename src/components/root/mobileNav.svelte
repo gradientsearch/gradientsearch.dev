@@ -10,18 +10,13 @@
 		isOpen = !isOpen;
 	}
 
-	let openState = $state(false);
-
-	function popoverClose() {
-		openState = false;
-	}
 </script>
 
 <div class="flex items-center justify-center lg:hidden">
 	<Popover
 		zIndex="100"
-		open={openState}
-		onOpenChange={(e) => (openState = e.open)}
+		open={isOpen}
+		onOpenChange={(e) => (isOpen = e.open)}
 		positioning={{ placement: 'top' }}
 		triggerBase="btn preset-tonal"
 		contentBase="card bg-surface-200-800 p-4 space-y-4 max-w-[320px]"

@@ -179,8 +179,6 @@ bundleLock := bundleMapOfMu.Lock(bundlePath)
 defer bundleLock.Unlock()`
 </script>
 
-<!-- POST 2 -->
-
 <PageLayout {backHref} {backText} {title} {date}>
 	<PageSubtitle className="underline underline-offset-8 decoration-sky-500"
 		>Synchronizing PwManager: Preventing Race Conditions When Sharing Password Bundles</PageSubtitle

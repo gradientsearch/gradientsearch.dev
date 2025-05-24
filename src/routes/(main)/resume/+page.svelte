@@ -75,7 +75,6 @@
 							{#each entries as [key, value]}
 								<p class="text-lg">{key}</p>
 
-								
 								{#each value as v}
 									{#if typeof v == 'string'}
 										<p style="padding-left: {depth * 40}px">{@html v}</p>

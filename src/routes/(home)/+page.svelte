@@ -23,7 +23,9 @@
 </script>
 
 <svelte:head>
-	<title>Stephen O'Dwyer - Data Driven Security Software Engineer | Software, Cyber, ML, SRE | {base}</title>
+	<title
+		>Stephen O'Dwyer - Data Driven Security Software Engineer | Software, Cyber, ML, SRE | {base}</title
+	>
 	<meta name="description" content="Stephen O'Dwyer Introduction" />
 </svelte:head>
 

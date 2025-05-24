@@ -7,8 +7,6 @@
 	import Code from '../../../../components/code.svelte';
 	import Emphasis from '../../../../components/emphasis.svelte';
 	import { base } from '$app/paths';
-	import { TableOfContents, tocCrawler } from '@skeletonlabs/skeleton';
-
 	let p: post = posts[1];
 	let title = p.title;
 	let date = p.date;
@@ -151,9 +149,7 @@ jobs:
 
 	<PageParagraph>Let's dive into the steps!</PageParagraph>
 
-	<TableOfContents />
-
-	<div use:tocCrawler={{ mode: 'generate' }}>
+	<div>
 		<PageHeader className="">1. Configuring Svelte to Build a Static Site</PageHeader>
 
 		<PageParagraph>Disable SSR, enable prerendering, and remove trailing slashes.</PageParagraph>

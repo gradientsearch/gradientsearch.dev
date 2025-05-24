@@ -93,8 +93,8 @@
 		Renovate Bot will work behind the scenes to review your project's dependencies. After a few more
 		minutes, you’ll see PRs opened in your repository to upgrade the dependencies. Before merging
 		the updates, make sure they make sense for your project. Projects with robust testing and a
-		CI/CD pipeline to run tests prior to merging are generally more comfortable
-		automating dependencies in this automated way.
+		CI/CD pipeline to run tests prior to merging are generally more comfortable automating
+		dependencies in this automated way.
 	</PageParagraph>
 	<img src="{base}/blog/8/4_prs.png" alt="renovate app" />
 

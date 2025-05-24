@@ -62,7 +62,10 @@ func main() {
 	<img src="{base}/blog/10/statsviz.png" alt="cert" />
 
 	<PageParagraph>
-		Code on <a href="https://github.com/gradientsearch/go-service-profiling" class="underline underline-offset-8 text-sky-500">GitHub</a>
+		Code on <a
+			href="https://github.com/gradientsearch/go-service-profiling"
+			class="underline underline-offset-8 text-sky-500">GitHub</a
+		>
 	</PageParagraph>
 	<PageParagraph>
 		In this post, we’ll walk through setting up debug endpoints to profile your Go application in
@@ -148,8 +151,7 @@ func main() {
 		Be cautious when running this in a production environment and always ensure these endpoints are
 		not publicly accessible.
 	</PageParagraph>
-	
-	
+
 	<h2>Metric Descriptions</h2>
 
 	<PageParagraph>

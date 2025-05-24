@@ -7,8 +7,6 @@
 	import Code from '../../../../components/code.svelte';
 	import Emphasis from '../../../../components/emphasis.svelte';
 	import { base } from '$app/paths';
-	import { TableOfContents, tocCrawler } from '@skeletonlabs/skeleton';
-
 	let p: post = posts[6];
 	let title = p.title;
 	let date = p.date;

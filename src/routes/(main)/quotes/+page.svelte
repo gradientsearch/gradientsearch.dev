@@ -3,8 +3,6 @@
 	import Simple from '../../../components/layout/simple.svelte';
 
 	import { quotes } from './quotes';
-
-	import { TableOfContents, tocCrawler } from '@skeletonlabs/skeleton';
 	import { onMount } from 'svelte';
 	import PageSubtitle from '../../../components/pageSubtitle.svelte';
 	import Container from '../../../components/container/container.svelte';

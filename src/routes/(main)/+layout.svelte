@@ -6,10 +6,7 @@
 	import hljs from 'highlight.js/lib/core';
 	import 'highlight.js/styles/github-dark.css';
 
-	import { computePosition, autoUpdate, offset, shift, flip, arrow } from '@floating-ui/dom';
-	import { storePopup } from '@skeletonlabs/skeleton';
 	import Footer from '../../components/root/footer.svelte';
-	storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
 </script>
 
 <svelte:head>

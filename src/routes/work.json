@@ -1,5 +1,55 @@
 [
 	{
+		"name": "Clairvoyant Intelligence",
+		"title": "Platform Engineer",
+		"start": "2025",
+		"end": "present",
+		"iconPath": "work/ci.png",
+		"href": "https://www.clairvoyantintel.com/",
+		"summary": "As a platform engineer, I am responsible for building, maintaining, and securing the Kubernetes-based platform infrastructure running on AWS EKS. I support the deployment and lifecycle of our core product offering and supporting infrastructure using GitOps (ArgoCD), Helm, and Docker. My work focuses on creating a scalable, reliable, and secure developer platform across multiple environments",
+		"overview": {
+			"summary": "As a platform engineer, I am responsible for building, maintaining, and securing the Kubernetes-based platform infrastructure running on AWS EKS. I support the deployment and lifecycle of our core product offering and supporting infrastructure using GitOps (ArgoCD), Helm, and Docker. My work focuses on creating a scalable, reliable, and secure developer platform across multiple environments.",
+			"contributions": {
+				"✅ Platform Engineering": [
+					{
+						"▼ GitOps Platform with ArgoCD & Helm": [
+							"▼ Implement and manage a GitOps workflow using ArgoCD to continuously deliver and sync Helm-based application deployments across multiple EKS clusters.",
+							"▼ Create reusable Helm charts to standardize application configuration, enforce consistency, reduce drift, and simplify onboarding for developers.",
+							"▼ Integrate ArgoCD with GitHub, using the app-of-apps pattern and parameterized Helm releases to support a multitenant microservices architecture.",
+							"▼ Automate ArgoCD Application generation for dynamic app deployment across environments using cluster selectors and Git directory generators.",
+							"▼ Enable progressive delivery, supporting canary and blue-green strategies for key applications."
+						]
+					},
+					{
+						"▼ Kubernetes Infrastructure on AWS EKS": [
+							"▼ Provision and manage multiple EKS clusters using AWS APIs, incorporating best practices for networking, IAM, autoscaling, and cost optimization.",
+							"▼ Maintain cluster lifecycle and upgrades via managed node groups and EKS version tracking to minimize downtime and ensure cluster compatibility.",
+							"▼ Build self-service tooling and templates for developers to deploy services via Helm and ArgoCD with minimal friction."
+						]
+					},
+					{
+						"▼ Docker Image Pipelines & Registry Management": [
+							"▼ Standardize base Docker images with security hardening and performance optimizations to reduce build time and image size across teams.",
+							"▼ Integrate image vulnerability scanning (e.g., Trivy or Grype) into CI pipelines to block risky deployments before they reach production.",
+							"▼ Design multistage Dockerfiles for Go, Python, and Node.js services to optimize container build speed and production size.",
+							"▼ Maintain AWS ECR image repositories, set lifecycle rules for image pruning, and establish IAM policies for secure pull access."
+						]
+					}
+				],
+				"✅ Reliability & Observability": [
+					{
+						"▼ Cluster Observability": [
+							"▼ Deploy and manage observability stacks (Prometheus, Grafana, Loki, and Alertmanager) via Helm and ArgoCD across multiple clusters.",
+							"▼ Configure custom alerts and dashboards for node health, pod crash loops, high latency services, and HPA status.",
+							"▼ Enable developers to self-serve metrics and logs using Grafana shared folders and scoped Prometheus queries."
+						]
+					}
+				]
+			},
+			"skills": "Kubernetes · Helm · ArgoCD · AWS EKS · Docker · GitOps · Prometheus · Grafana · Loki · Alertmanager · Trivy · Grype · AWS ECR · IAM ·  CI/CD · Multistage Dockerfiles · Horizontal Pod Autoscaler (HPA) · Kubernetes RBAC · Cluster Autoscaler"
+		}
+	},
+	{
 		"name": "Equinix Metal",
 		"title": "Senior Security Engineer",
 		"start": "2023",

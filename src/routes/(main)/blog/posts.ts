@@ -64,5 +64,11 @@ export const posts: post[] = [
 		title: 'Exposing Go Internals: Setting Up Debug Endpoints',
 		description: `In this post, we’ll walk through setting up debug endpoints to profile your Go application in real time. We'll also integrate Statsviz to provide a user-friendly GUI for visualizing metrics like heap usage and goroutine activity. To make things more interesting, we’ll simulate load by sending a burst of requests to a liveness endpoint, allowing us to see how the heap and goroutine count respond under pressure.`,
 		date: '2025-04-15'
+	},
+	{
+		id: '11',
+		title: '🚀 New Chapter Unlocked!',
+		description: `I’m excited to share that I’ve started a new role as a Platform Engineer!`,
+		date: '2025-05-15'
 	}
 ];

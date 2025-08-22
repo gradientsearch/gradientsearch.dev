@@ -41,6 +41,6 @@
 		"@floating-ui/dom": "^1.6.12",
 		"@sveltejs/adapter-static": "^3.0.6",
 		"highlight.js": "^11.11.0",
-		"lucide-svelte": "^0.468.0"
+		"lucide-svelte": "^0.541.0"
 	}
 }
